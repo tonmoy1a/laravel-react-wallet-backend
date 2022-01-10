@@ -17,9 +17,9 @@ class WalletTrensectionService {
         $wallet->save();
     }
 
-    public function getTrensectionsByUserId($user_id)
+    public function getTrensectionsByWalletId($user_id)
     {
-        return WalletTrensection::where('from_wallet_id', $user_id)
+        return WalletTrensection::with('fromWallet')->where('from_wallet_id', $user_id)
             ->orWhere('to_wallet_id', $user_id)
             ->latest()
             ->get();

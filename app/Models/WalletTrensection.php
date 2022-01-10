@@ -9,4 +9,8 @@ class WalletTrensection extends Model
 {
     use HasFactory;
 
+    public function fromWallet()
+    {
+        return $this->belongsTo('App\Models\Wallet');
+    }
 }

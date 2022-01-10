@@ -42,7 +42,7 @@ class WalletTrensectionController extends Controller
 
     public function getUserWalletTrensection()
     {
-        return $this->walletTrensectionSerivce->getTrensectionsByUserId(JWTAuth::user()->id);
+        return $this->walletTrensectionSerivce->getTrensectionsByWalletId(JWTAuth::user()->wallet->id);
 
     }
 
