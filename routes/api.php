@@ -29,5 +29,10 @@ Route::group([
     Route::post('auth/logout', 'AuthController@logout');
     Route::post('auth/refresh', 'AuthController@refresh');
 
+    Route::get('user-wallet', 'WalletController@getUserWallet');
+    Route::get('user-wallet-trensection', 'WalletTrensectionController@getUserWalletTrensection');
+
+    Route::post('wallet-trensection', 'WalletTrensectionController@store');
+
 });
 
